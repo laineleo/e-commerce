@@ -1,0 +1,251 @@
+/* * {
+    outline: 1px solid red;
+} */
+
+html {
+    position: relative;
+    background-color: #f3f8fd;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    /* position: relative; */
+}
+
+/* header {
+    display: flex;
+    flex-direction: row;
+} */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #d8d8d8;
+    background-color: white;
+}
+
+.nav-title {
+    padding-left: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 24px;
+    color: #D4D2DD;
+}
+
+.leaf {
+    margin-right: 10px;
+}
+
+.profile-img {
+    width: 40px;
+    margin: 10px 50px 10px 10px;
+    border-radius: 50%;
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70px;
+    background-color: white;
+    border-right: 1px solid #d8d8d8;
+    z-index: 1;
+}
+
+.main-logo {
+    margin: 20px 0;
+    width: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #F3F8FD;
+}
+
+.sidebar ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.item-icon {
+    padding: 0;
+}
+
+main {
+    margin: 0 7%;
+}
+
+.search-cart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 50px;
+    margin-top: 80px;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    margin: 0 3% 0 0;
+    border-radius: 10px;
+    background-color: white;
+    width: 30%;
+    justify-content: space-between;
+    height: 40px;
+
+    img {
+        margin: 10px;
+    }
+}
+
+.search-bar input {
+    border: none;
+}
+
+.search-bar input::placeholder {
+    padding-left: 10%;
+}
+
+.cart-btn {
+    display: flex;
+    width: 7%;
+    justify-content: space-around;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: #9C89FF;
+    color: white;
+    align-items: center;
+    height: 40px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    input {
+        border: 1px solid #d8d8d8;
+    }
+
+    input::placeholder {
+        padding-left: 20px;
+    }
+}
+
+.cart-container {
+    margin: 50px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    height: 300px;
+    background-color: white;
+
+    p {
+        color: #7d7d7d;
+    }
+
+    a {
+        padding: 20px;
+        border: 1px solid #9C89FF;
+        border-radius: 10px;
+        color: #9C89FF;
+        text-decoration: none;
+    }
+}
+
+.shipping-form {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 50px;
+    margin-right: 5%;
+}
+
+.shipping-summary span {
+    color: #7d7d7d;
+}
+
+.shipping-title {
+    margin: 0;
+    color: #7d7d7d;
+}
+
+.first-last {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    height: 40px;
+}
+
+.names-input {
+    width: 47%;
+    border-radius: 10px;
+}
+
+.addresses {
+    border-radius: 10px;
+    height: 40px;
+    margin: 0 0 20px 0;
+}
+
+.city-state-zip {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.adr-inputs {
+    width: 30%;
+    border-radius: 10px;
+    height: 40px;
+}
+
+.receipt {
+    color: #b8b8b8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ship-fee {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #7d7d7d;
+}
+
+.total {
+    font-size: 22px;
+    color: #9C89FF !important;
+}
+
+.checkout {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 15px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #9C89FF;
+    color: white;
+}
