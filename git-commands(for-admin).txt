@@ -1,0 +1,5 @@
+git checkout main
+git pull origin main
+git merge develop
+# Resolve conflicts if any, then:
+git push origin main
