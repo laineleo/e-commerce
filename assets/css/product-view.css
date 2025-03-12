@@ -222,7 +222,7 @@ main {
 .product-details h2 {
     font-size: 22px;
     font-weight: bold;
-    color: #7D7D7D ;
+    color: #7D7D7D;
     margin-bottom: 2px;
     font-family: sans-serif
 }
@@ -232,10 +232,11 @@ main {
     align-items: center;
     gap: 5px;
 
-    p{
+    p {
         font-size: 12px;
     }
 }
+
 .product-details ul {
     display: flex;
     list-style: none;
@@ -243,7 +244,7 @@ main {
     margin: 0;
     padding: 0;
 
-    li{
+    li {
         font-size: 12px;
     }
 }
@@ -275,17 +276,72 @@ main {
     width: 90%;
 }
 
-.quantity, .total {
+.quantity,
+.total {
     display: flex;
     flex-direction: column;
-    width: 100px; 
-    list-style: none; 
-    padding: 0;/
-    margin: 0; 
+    width: 100px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-    p{
+    p {
         margin-right: 0;
     }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    /* hahahahahhaahaha 1000 */
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.check-icon {
+    width: 35px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.added-to-cart {
+    font-size: large;
+    margin-left: 20px;
+    color: #7D7D7D;
+    font-weight: bold;
+}
+
+.close-button {
+    margin-left: auto;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 
@@ -316,7 +372,7 @@ main {
     align-items: center;
     gap: 10px;
     color: #9C89FF;
-    border: 1px solid #9C89FF ;
+    border: 1px solid #9C89FF;
     padding: 10px 20px;
     border-radius: 10px;
     cursor: pointer;
@@ -357,7 +413,7 @@ main {
 
 
 .similar-items-list li {
-    background-color: #FFFFFF ;
+    background-color: #FFFFFF;
     border-radius: 20px;
     margin-bottom: 20px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
@@ -375,13 +431,13 @@ main {
     text-decoration: none;
 }
 
-.similar-items-list li a:hover{
+.similar-items-list li a:hover {
     opacity: 0.8;
 }
 
 .similar-items-list h3 {
     font-size: 15px;
-    color:#7D7D7D; 
+    color: #7D7D7D;
     margin-top: 20px;
     padding: 0 20px;
 }
@@ -421,7 +477,7 @@ main {
     display: inline-block;
 }
 
-.imgname-price{
+.imgname-price {
     display: flex;
     align-items: center;
     gap: 10px;

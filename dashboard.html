@@ -4,320 +4,436 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="after-login-dash.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Dashboard</title>
+
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
-            <h1 class="nav-title"><img src="assets/images/icons/leaf.svg" class="leaf">Let's order fresh items for you.
-            </h1>
-            <article class="profile">
-                <h3>JG</h3>
-                <p>JhaverG.</p>
-            </article>
-        </nav>
-        <article class="sidebar">
-            <img src="assets/images/icons/main-logo.svg" class="main-logo">
-            <ul>
-                <li><img src="assets/images/icons/items-purple.svg" class="item-icon"></li>
-            </ul>
-        </article>
+        <section id="top-nav-header">
+            <div>
+                <img src="assets/images/icons/leaf.svg" alt="leaf-icon">
+                <h3>Let's order fresh items for you.</h3>
+            </div>
+            <form>
+                <input id="sign-up-btn" type="button" value="Signup">
+                <input id="log-in-btn" type="button" value="Login">
+            </form>
+        </section>
     </header>
+
+    <main>
+        <section id="left-nav-header">
+            <img src="assets/images/icons/main-logo.svg" alt="e-commerce-logo">
+            <img id="nav-btn" src="assets/images/icons/items-purple.svg" alt="dashboard-icon">
+        </section>
+
+        <section id="main-content">
+            <section id="search-to-cart-section">
+                <div class="search-container">
+                    <input type="text" placeholder="Search Products">
+                    <div id="search-icon">
+                        <img src="assets/images/icons/search.svg" alt="search-icon">
+                    </div>
+                </div>
+                <div id="cart-container">
+                    <div id="cart-btn">
+                        <img src="assets/images/icons/cart-gray.svg" alt="cart-gray-icon">
+                        <p>Cart (0)</p> <!-- Put ID for JS Cart Quantity -->
+                    </div>
+                </div>
+            </section>
+
+            <section id="meals-container">
+                <section id="category-section">
+                    <h4>Categories</h4>
+                    <nav>
+                        <ul>
+                            <li>
+                                <p id="product-quantity">36</p>
+                                <img src="assets/images/icons/category-icons/all-product.svg" alt="all-products-icon">
+                                <p id="category-title">All Products</p>
+                            </li>
+                            <li>
+                                <p id="product-quantity">15</p>
+                                <img src="assets/images/icons/category-icons/vegetables.svg" alt="vegetables-icon">
+                                <p id="category-title">Vegetables</p>
+                            </li>
+                            <li>
+                                <p id="product-quantity">15</p>
+                                <img src="assets/images/icons/category-icons/fruits.svg" alt="fruits-icon">
+                                <p id="category-title">Fruits</p>
+                            </li>
+                            <li>
+                                <p id="product-quantity">15</p>
+                                <img src="assets/images/icons/category-icons/meat.svg" alt="pork-icon">
+                                <p id="category-title">Pork</p>
+                            </li>
+                            <li>
+                                <p id="product-quantity">15</p>
+                                <img src="assets/images/icons/category-icons/meat.svg" alt="beef-icon">
+                                <p id="category-title">Beef</p>
+                            </li>
+                            <li>
+                                <p id="product-quantity">15</p>
+                                <img src="assets/images/icons/category-icons/dairy.svg" alt="chicken-icon">
+                                <p id="category-title">Chicken</p>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+                <section id="display-product-section">
+                    <h4>All Products (36)</h4>
+                    <ul>
+                        <li>
+                            <a href="#" class="product-click">
+                                <img src="assets/images/image1.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Vegetables</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <p>36 Rating</p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$10</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/image2.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Vegetables</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <p>36 Rating</p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$10</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/image3.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Vegetables</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <p>36 Rating</p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$10</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/image4.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Vegetables</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <p>36 Rating</p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$10</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/image5.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Vegetables</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <p>36 Rating</p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$10</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/image6.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Vegetables</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <p>36 Rating</p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$10</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/image7.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Vegetables</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <p>36 Rating</p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$10</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/image8.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Vegetables</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <p>36 Rating</p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$10</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/image9.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Vegetables</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <p>36 Rating</p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$10</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/image10.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Vegetables</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <p>36 Rating</p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$10</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/imag11.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Vegetables</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <p>36 Rating</p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$10</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/imag12.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Vegetables</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <p>36 Rating</p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$10</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/imag13.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Vegetables</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <p>36 Rating</p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$10</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/image14.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Vegetables</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <p>36 Rating</p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$10</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/image15.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Vegetables</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <p>36 Rating</p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$10</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/image15.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Vegetables</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <p>36 Rating</p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$10</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/image15.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Vegetables</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <p>36 Rating</p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$10</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/image15.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Vegetables</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <p>36 Rating</p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$10</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+    </main>
 </body>
-<main>
-    <section class="search-cart">
-        <form class="search-bar">
-            <input type="text" placeholder="Search Products">
-            <img src="assets/images/icons/search.svg">
-        </form>
-        <a href="#" class="cart-btn">
-            <img src="assets/images/icons/cart-gray.svg">
-            <p>Cart (4)</p>
-        </a>
-    </section>
-    <section class="categories">
-        <article class="allproducts-chicken">
-            <h3>Categories</h3>
-            <ul>
-                <li>
-                    <img src="assets/images/icons/category-icons/all-product.svg" alt="all categories">
-                    <p>All products</p>
-                    <p>36</p>
-                </li>
-                <li>
-                    <img src="assets/images/icons/category-icons/fruits.svg" alt="vegetables">
-                    <p>Vegetables</p>
-                    <p>12</p>
-                </li>
-                <li>
-                    <img src="assets/images/icons/category-icons/vegetables.svg" alt="fruits">
-                    <p>Fruits</p>
-                    <p>12</p>
-                </li>
-                <li>
-                    <img src="assets/images/icons/category-icons/meat.svg" alt="meat-pork">
-                    <p>Pork</p>
-                    <p>12</p>
-                </li>
-                <li>
-                    <img src="assets/images/icons/category-icons/dairy.svg" alt="beef">
-                    <p>Beef</p>
-                    <p>12</p>
-                </li>
-                <li>
-                    <img src="assets/images/icons/category-icons/grains.svg" alt="chicken">
-                    <p>Chicken</p>
-                    <p>12</p>
-                </li>
-            </ul>
-        </article>
-    </section>
-    <section class="All-Products">
-        <article>
-            <ul>
-                <li>
-                    <img src="assets/images/image1.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image2.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image3.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image4.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image5.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image6.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image7.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image8.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image9.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image10.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image11.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/imag12.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/imag13.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image14.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image15.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-        </article>
-    </section>
-</main>
+<script src="js/dashboard.js"></script>
 
 </html>
