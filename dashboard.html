@@ -4,320 +4,554 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="after-login-dash.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Dashboard</title>
+
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
-            <h1 class="nav-title"><img src="assets/images/icons/leaf.svg" class="leaf">Let's order fresh items for you.
-            </h1>
-            <article class="profile">
-                <h3>JG</h3>
-                <p>JhaverG.</p>
+        <section id="top-nav-header">
+            <div>
+                <img src="assets/images/icons/leaf.svg" alt="leaf-icon">
+                <h3>Let's order fresh items for you.</h3>
+            </div>
+            <article class="dropdown">
+                <button class="dropbtn" id="profile-btn">
+                    <img src="assets/images/Ellipse 18.png" alt="Profile Picture" class="profile-pic">
+                    <img src="assets/images/Vector (1).png" alt="Dropdown Arrow" class="arrow-icon">
+                </button>
+                <ul class="dropdown-menu" id="dropdown-menu">
+                    <li><a href="#" id="logout-btn">Logout</a></li>
+                </ul>
             </article>
-        </nav>
-        <article class="sidebar">
-            <img src="assets/images/icons/main-logo.svg" class="main-logo">
-            <ul>
-                <li><img src="assets/images/icons/items-purple.svg" class="item-icon"></li>
-            </ul>
-        </article>
+        </section>
     </header>
+
+    <main>
+        <section id="left-nav-header">
+            <img src="assets/images/icons/main-logo.svg" alt="e-commerce-logo">
+            <img id="nav-btn" src="assets/images/icons/items-purple.svg" alt="dashboard-icon">
+        </section>
+
+        <section id="main-content">
+            <section id="search-to-cart-section">
+                <div class="search-container">
+                    <input type="text" placeholder="Search Products">
+                    <div id="search-icon">
+                        <img src="assets/images/icons/search.svg" alt="search-icon">
+                    </div>
+                </div>
+                <div id="cart-container">
+                    <a href="cart-page.html" id="cart-btn">
+                        <img src="assets/images/icons/cart-gray.svg" alt="cart-gray-icon">
+                        <p id="cart-count">Cart(0)</p> <!-- Put ID for JS Cart Quantity -->
+                    </a>
+                </div>
+            </section>
+
+            <section id="meals-container">
+                <section id="category-section">
+                    <h4>Categories</h4>
+                    <nav>
+                        <ul>
+                            <li>
+                                <p id="product-quantity">36</p>
+                                <img src="assets/images/icons/category-icons/all-product.svg" alt="all-products-icon">
+                                <p id="category-title">All Products</p>
+                            </li>
+                            <li>
+                                <p id="product-quantity">15</p>
+                                <img src="assets/images/icons/category-icons/vegetables.svg" alt="vegetables-icon">
+                                <p id="category-title">Vegetables</p>
+                            </li>
+                            <li>
+                                <p id="product-quantity">15</p>
+                                <img src="assets/images/icons/category-icons/fruits.svg" alt="fruits-icon">
+                                <p id="category-title">Fruits</p>
+                            </li>
+                            <li>
+                                <p id="product-quantity">15</p>
+                                <img src="assets/images/icons/category-icons/meat.svg" alt="pork-icon">
+                                <p id="category-title">Pork</p>
+                            </li>
+                            <li>
+                                <p id="product-quantity">15</p>
+                                <img src="assets/images/icons/category-icons/meat.svg" alt="beef-icon">
+                                <p id="category-title">Beef</p>
+                            </li>
+                            <li>
+                                <p id="product-quantity">15</p>
+                                <img src="assets/images/icons/category-icons/dairy.svg" alt="chicken-icon">
+                                <p id="category-title">Chicken</p>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+                <section id="display-product-section">
+                    <h4>All Products (36)</h4>
+                    <ul>
+                        <li>
+                            <a href="#" class="product-click">
+                                <img src="assets/images/karekare.jpg" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Kare-Kare</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <p class="rating-text">36 Rating</p>
+
+                                            <!-- Nilagay ko na yung style display none dito para madali niyo hanapin if ever -->
+                                            <p class="described">Kare Kare is a type of Filipino
+                                                stew with a rich and thick peanut sauce. It is a popular dish in the
+                                                Philippines.</p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$20</p>
+
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="product-click">
+                                <img src="assets/images/knorr.jpg" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Knorr Cubes</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <p class="rating-text">36 Rating</p>
+                                            <p class="described">Ingredients. Salt, Monosodium
+                                                Glutamate, Partially
+                                                Hydrogenated Cottonseed Oil, Chicken Fat, Hydrolyzed Corn Protein,
+                                                Corn Starch, Sugar, Dried Chicken Meat, Onion Powder, Water, Turmeric,
+                                                Garlic Powder, Caramel Color, Spices, Dried
+                                                Parsley, Citric Acid, Disodium Inosinate, Disodium Guanylate, Natural
+                                                Flavors.</p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$10</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/sinigang.jpg" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Sinigang</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <p class="rating-text">36 Rating</p>
+                                            <p class="described">Pork Sinigang is a delicious
+                                                Filipino sour soup
+                                                dish. The soup is made from any cut of pork along tomato, string beans,
+                                                spinach, and tamarind.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$30</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/bulalo.webp" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Bulalo</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <p class="rating-text">36 Rating</p>
+                                            <p class="described">This Bulalo Recipe is also called beef shank soup.
+                                                This is a perfect cold weather food. This is one Filipino Soup Recipe
+                                                that you will surely love.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$25</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/lomi.jpg" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Lomi</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <p class="rating-text">36 Rating</p>
+                                            <p class="described">Lomi or Pancit Lomi is a type of
+                                                noodle soup dish
+                                                that makes use of thick egg noodles. Although this dish originated
+                                                from the Chinese, it has been widely embraced by Filipinos and has
+                                                become a popular comfort food.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$35</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/mangga.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Mangga</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <p class="rating-text">36 Rating</p>
+                                            <p class="described">Mango, locally known as “mangga”
+                                                and
+                                                scientifically named Mangifera indica L., is the Philippines' national
+                                                fruit. It is
+                                                also the third most important fruit crop based on export volume in the
+                                                Philippines, next to banana and pineapple.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$45</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/baboy.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Baboy</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <p class="rating-text">36 Rating</p>
+                                            <p class="described">The tagalog word for pork or
+                                                pig. One of the best
+                                                qualities of this amazing ingredient is it's versatility. So many
+                                                dishes and preparations can be made from a single animal.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$55</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/baka.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Baka</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <p class="rating-text">36 Rating</p>
+                                            <p class="described">Baka is a Japanese word that
+                                                means “crazy,”
+                                                “foolish,” or downright “stupid.” It can also be used as a noun for “a
+                                                fool”
+                                                or “a crazy or stupid person.” Anime and manga fans in the West have
+                                                adopted the use of baka as a (usually joking)
+                                                insult.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$13</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/pating.webp" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Pating</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <p class="rating-text">36 Rating</p>
+                                            <p class="described">Ang mga pating ay isang pangkat
+                                                ng mga
+                                                elasmobrankiyong isda na nakikilala sa de kartilagong kalansay, lima
+                                                hanggang
+                                                pitong hiwa ng hasang sa tagaliran ng ulo, at pektoral na palikpik na
+                                                nakakabit sa ulo.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$16</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/iguana.webp" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Iguana</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <p class="rating-text">36 Rating</p>
+                                            <p class="described">Iguanas possess atrophied venom
+                                                glands that
+                                                produce a weak harmless venom, and they are common pets to reptile
+                                                collectors. Nevertheless, iguanas possess dozens of sharp serrated
+                                                teeth.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$24</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/king-cobra.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>King Cobra</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <p class="rating-text">36 Rating</p>
+                                            <p class="described">The bite of the King Cobra with
+                                                envenomation can
+                                                be rapidly fatal (as early as 30 minutes). Please read the attached
+                                                Medical Management Protocol and respond appropriately. First Aid:
+                                                Bandage and Immobilize the bitten limb with crepe
+                                                bandages and splint as described in the Immediate First Aid section.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$27</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/patatas.webp" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Patatas</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <p class="rating-text">36 Rating</p>
+                                            <p class="described">The potato is a starchy tuberous
+                                                vegetable native to the Americas that is consumed as a staple food in
+                                                many parts of the world. Potatoes are underground tubers of the plant
+                                                Solanum tuberosum, a perennial in the nightshade
+                                                family Solanaceae.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$33</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/salamagi.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Salamagi</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <p class="rating-text">36 Rating</p>
+                                            <p class="described">Tamarind (Tamarindus indica) is
+                                                a leguminous tree
+                                                bearing edible fruit that is indigenous to tropical Africa and
+                                                naturalized in Asia. The genus Tamarindus is monotypic, meaning that it
+                                                contains only this species. It belongs to the
+                                                family Fabaceae.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$5</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/salamanca.jpg" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Salamanca</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <p class="rating-text">36 Rating</p>
+                                            <p class="described">Pinsala'y ikinamada mo
+                                                binibining may salamangka.
+                                                You've turned my limbics into a bouquet. Ikaw ay tila sining sa museong
+                                                'di naluluma
+                                                Binibini kong ginto hanggang kaluluwa. Gonna keep you like a "nu
+                                                couché". All my li-ha-ha-haaaife.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$60</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/dionela.jpg" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Dionela</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <p class="rating-text">36 Rating</p>
+                                            <p class="described">Timothy Dionela (born March 14,
+                                                1999), known
+                                                professionally by his last name as Dionela, is a Filipino
+                                                singer-songwriter and musician. His 2024 singles "Sining" (featuring Jay
+                                                R) and "Marilag" reached number one on
+                                                Billboard Philippines Hot 100.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$70</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/rambutan.webp" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Rambutan</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <p class="rating-text">36 Rating</p>
+                                            <p class="described">A rambutan (Nephelium lappaceum)
+                                                is a tree from
+                                                southeast Asia. The fruit that grows on the tree is also called
+                                                rambutan. It is in the same family as Lychee.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$40</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/adobong-sitaw.jfif" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Adobong Sitaw</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <p class="rating-text">36 Rating</p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$50</p>
+                                    <p class="described">Adobong Sitaw is a Filipino dish wherein
+                                        string beans are
+                                        cooked using the inadobo method. It is savory, slightly tangy,
+                                        and packed with flavor.
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="product-click">
+                                <img src="assets/images/kamatis.webp" alt="food-1" class="image-click">
+                                <div class="product-description">
+                                    <div class="description-container">
+                                        <h5>Kamatis</h5>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <p class="rating-text">36 Rating</p>
+                                        </div>
+                                    </div>
+                                    <p class="product-price">$30</p>
+                                    <p class="described">Typical of the Philippines, the kamatis
+                                        tagalog is a
+                                        particular variety of tomato with a flat shape and a rigged
+                                        surface. The skin is thick and glossy, with a light red color. It is very
+                                        resistant to the lack of water and to high
+                                        temperatures, where it grows luxuriantly.
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+    </main>
 </body>
-<main>
-    <section class="search-cart">
-        <form class="search-bar">
-            <input type="text" placeholder="Search Products">
-            <img src="assets/images/icons/search.svg">
-        </form>
-        <a href="#" class="cart-btn">
-            <img src="assets/images/icons/cart-gray.svg">
-            <p>Cart (4)</p>
-        </a>
-    </section>
-    <section class="categories">
-        <article class="allproducts-chicken">
-            <h3>Categories</h3>
-            <ul>
-                <li>
-                    <img src="assets/images/icons/category-icons/all-product.svg" alt="all categories">
-                    <p>All products</p>
-                    <p>36</p>
-                </li>
-                <li>
-                    <img src="assets/images/icons/category-icons/fruits.svg" alt="vegetables">
-                    <p>Vegetables</p>
-                    <p>12</p>
-                </li>
-                <li>
-                    <img src="assets/images/icons/category-icons/vegetables.svg" alt="fruits">
-                    <p>Fruits</p>
-                    <p>12</p>
-                </li>
-                <li>
-                    <img src="assets/images/icons/category-icons/meat.svg" alt="meat-pork">
-                    <p>Pork</p>
-                    <p>12</p>
-                </li>
-                <li>
-                    <img src="assets/images/icons/category-icons/dairy.svg" alt="beef">
-                    <p>Beef</p>
-                    <p>12</p>
-                </li>
-                <li>
-                    <img src="assets/images/icons/category-icons/grains.svg" alt="chicken">
-                    <p>Chicken</p>
-                    <p>12</p>
-                </li>
-            </ul>
-        </article>
-    </section>
-    <section class="All-Products">
-        <article>
-            <ul>
-                <li>
-                    <img src="assets/images/image1.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image2.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image3.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image4.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image5.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image6.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image7.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image8.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image9.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image10.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image11.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/imag12.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/imag13.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image14.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="assets/images/image15.jfif" alt="component 1">
-                    <div>
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                            <li><img src="assets/images/icons/Vector.png" alt="star"></li>
-                        </ul>
-                        <p>$ 10</p>
-                    </div>
-                </li>
-            </ul>
-        </article>
-    </section>
-</main>
+<script src="js/dashboard.js"></script>
 
 </html>
