@@ -353,3 +353,113 @@ main {
     background-color: #9C89FF;
     color: white;
 }
+
+/* Styles for Payment Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.payment-header {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.modal h2 {
+    color: #7D7D7D;
+    font-size: 15px;
+    padding: 10px 0 0 0 ;
+    margin-bottom: 20px;
+}
+
+.payment-header img {
+    height: 30px;
+}
+
+.modal form input[type="text"] {
+    width: 95%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.expiration-cvc {
+    display: flex;
+    gap: 1rem;
+}
+
+.expiration-cvc input {
+    flex: 1;
+}
+
+button[type="submit"] {
+    background-color: #9C89FF;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#payment-modal p {
+    text-align: right;
+    margin-right: 10px;
+
+    span{
+        color:#9C89FF
+    } 
+}
+
+/* Notification Styles */
+.payment-notification {
+    position: fixed;
+    top: 40%;
+    right: 38%;
+    transform : 'translate(-50%, -50%)';
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-10px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}

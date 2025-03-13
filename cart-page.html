@@ -44,26 +44,48 @@
             <form class="shipping-form">
                 <h3 class="shipping-title">Shipping Information</h3>
                 <div class="first-last">
-                    <input type="text" placeholder="First Name" class="names-input">
-                    <input type="text" placeholder="Last Name" class="names-input">
+                    <input type="text" placeholder="First Name" class="names-input" required>
+                    <input type="text" placeholder="Last Name" class="names-input" required>
                 </div>
-                <input type="text" placeholder="Address" class="addresses">
+                <input type="text" placeholder="Address" class="addresses" required>
                 <input type="text" placeholder="Address 2" class="addresses">
                 <div class="city-state-zip">
-                    <input type="text" placeholder="City" class="adr-inputs">
-                    <input type="text" placeholder="State" class="adr-inputs">
-                    <input type="text" placeholder="ZIP Code" class="adr-inputs">
+                    <input type="text" placeholder="City" class="adr-inputs" required>
+                    <input type="text" placeholder="State" class="adr-inputs" required>
+                    <input type="text" placeholder="ZIP Code" class="adr-inputs" required>
                 </div>
                 <div class="shipping-summary">
                     <h3 class="shipping-title">Order Summary</h3>
                     <p class="receipt">Items<span>$0</span></p>
                     <p class="receipt ship-fee">Shipping Fee<span>$0</span></p>
                     <p class="receipt">Total Amount<span class="total">$0</span></p>
-                    <a href="" class="checkout">Proceed to Checkout</a>
+                    <a href="" class="checkout" id="proceed-checkout">Proceed to Checkout</a>
                 </div>
             </form>
         </section>
     </main>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="payment-header">
+                <img src="assets/images/icons/main-logo.svg" alt="logo">
+                <img src="assets/images/icons/visa-mastercard.png" alt="Mastercard Logo">
+            </div>
+            <h2>Card Details</h2>
+            <form id="payment-form" class="payment-form">
+                <input type="text" id="card-name" placeholder="Card Name" required>
+                <input type="text" id="card-number" placeholder="Card Number" required>
+                <div class="expiration-cvc">
+                    <input type="text" id="expiration" placeholder="Expiration" required>
+                    <input type="text" id="cvc" placeholder="CVC" required>
+                </div>
+                <p>Total Amount: <span id="total-amount">$45</span></p>
+                <button type="submit">Pay</button>
+            </form>
+        </div>
+    </div>
 </body>
 <script src="js/cart-page.js"></script>
 

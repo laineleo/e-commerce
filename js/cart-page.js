@@ -52,5 +52,87 @@ document.addEventListener("DOMContentLoaded", function () {
         const totalAmount = items.reduce((total, item) => total + parseFloat(item.total), 0).toFixed(2);
         const totalElement = document.querySelector(".shipping-summary .total");
         totalElement.innerText = `$${totalAmount}`;
+
+        const modalTotalElement = document.getElementById("total-amount");
+        if (modalTotalElement) {
+            modalTotalElement.innerText = `$${totalAmount}`;
+        }
+    }
+
+    // Payment- modal and required inputs
+    const modal = document.getElementById('payment-modal');
+    const proceedCheckoutButton = document.getElementById('proceed-checkout');
+    const shippingForm = document.querySelector('.shipping-form');
+    const paymentForm = document.getElementById('payment-form');
+
+    if (proceedCheckoutButton) {
+        proceedCheckoutButton.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            const inputs = Array.from(shippingForm.querySelectorAll('input[required]'));
+            const firstInvalid = inputs.find(input => !input.value.trim());
+
+            if (firstInvalid) {
+                firstInvalid.reportValidity();
+                return;
+            }
+
+            const totalAmount = document.querySelector(".shipping-summary .total").innerText;
+            const modalTotalElement = document.getElementById("total-amount");
+            if (modalTotalElement) {
+                modalTotalElement.innerText = totalAmount;
+            }
+
+            openModal();
+        });
+    }
+
+    if (paymentForm) {
+        paymentForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const paymentInputs = Array.from(paymentForm.querySelectorAll('input[required]'));
+            const firstInvalidPayment = paymentInputs.find(input => !input.value.trim());
+
+            if (firstInvalidPayment) {
+                firstInvalidPayment.reportValidity();
+                return;
+            }
+
+            showNotification('Payment successful! Thank you for your purchase.');
+            paymentForm.reset();
+            shippingForm.reset();
+            closeModal();
+        });
+    }
+
+    function showNotification(message) {
+        const notification = document.createElement('div');
+        notification.classList.add('payment-notification');
+        notification.innerText = message;
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+            notification.remove();
+        }, 3000);
+
+    }
+
+    window.openModal = function () {
+        if (modal) {
+            modal.style.display = 'block';
+        }
+    }
+
+    window.closeModal = function () {
+        if (modal) {
+            modal.style.display = 'none';
+        }
+    }
+
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            closeModal();
+        }
     }
 });
