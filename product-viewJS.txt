@@ -1,59 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
     const productDetails = JSON.parse(sessionStorage.getItem("selectedProduct"));
 
-    let mainImage;
-
-    // Define a maximum quantity limit
-    const MAX_QUANTITY = 10; // Set your desired limit here
-
     if (productDetails) {
-        mainImage = document.getElementById("main-image");
+        const mainImage = document.getElementById("main-image");
         const productNameElement = document.querySelector("h2");
-        const ratingTxt = document.querySelector(".rating-text-view");
         const priceElement = document.querySelector(".price");
         const descriptionElement = document.querySelector(".product-description");
 
+        // Set the product details in the view
         mainImage.setAttribute("src", productDetails.image);
         productNameElement.innerText = productDetails.name;
-        ratingTxt.innerText = productDetails.rateText;
         priceElement.innerText = productDetails.price;
-        descriptionElement.innerText = productDetails.description;
+        descriptionElement.innerText = "Description for " + productDetails.name; // You can customize this
     }
 
     const addToCartButton = document.querySelector(".add-to-cart");
     const quantityInput = document.querySelector("input[type='number']");
     const priceElement = document.querySelector(".price");
-    const totalPriceElement = document.querySelector(".total-price"); // Select the total price element
     const productName = document.querySelector("h2").innerText;
-
-    // Function to update the total amount
-    function updateTotalAmount() {
-        const quantity = parseInt(quantityInput.value);
-        const price = parseFloat(priceElement.innerText.replace('$', ''));
-        const totalAmount = (quantity * price);
-        totalPriceElement.innerText = `$${totalAmount}`; // Update the total price element
-    }
-
-    // Update total amount when quantity changes
-    quantityInput.addEventListener("input", function () {
-        let quantity = parseInt(quantityInput.value);
-
-        // Check if quantity exceeds the maximum limit
-        if (quantity > MAX_QUANTITY) {
-            quantity = MAX_QUANTITY; // Set to max limit
-            quantityInput.value = quantity; // Update the input field
-            alert(`You can only add up to ${MAX_QUANTITY} items.`); // Optional alert
-        }
-
-        updateTotalAmount();
-    });
 
     addToCartButton.addEventListener("click", function (event) {
         event.preventDefault();
 
         const quantity = parseInt(quantityInput.value);
         const price = parseFloat(priceElement.innerText.replace('$', ''));
-        const totalAmount = (quantity * price);
+        const totalAmount = (quantity * price).toFixed(2);
 
         const product = {
             name: productName,
@@ -88,6 +59,4 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         };
     }
-
-    updateTotalAmount();
 });

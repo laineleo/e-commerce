@@ -21,7 +21,7 @@
             </article>
         </nav>
         <article class="sidebar">
-            <h2 class="visually-hidden">Sidebar</h2>
+
             <img src="assets/images/icons/main-logo.svg" class="main-logo" alt="Main Logo">
             <ul>
                 <li><img src="assets/images/icons/items-purple.svg" class="item-icon" alt="Items Icon"></li>
@@ -31,7 +31,6 @@
 
     <main>
         <section class="search-cart">
-            <h2 class="visually-hidden">Search and Cart</h2>
             <form class="search-bar">
                 <input type="text" placeholder="Search Products">
                 <img src="assets/images/icons/search.svg" alt="Search Icon">
@@ -42,8 +41,7 @@
             </a>
         </section>
         <section class="product-container">
-            <h2 class="visually-hidden">Product Container</h2>
-            <a href="#" class="back-link">← All Products</a>
+            <a href="dashboard.html" class="back-link">← All Products</a>
             <article class="product-card" id="product-details">
                 <div class="main-thumbnail">
                     <img src="assets/images/image2.jfif" alt="Main Product" class="main-image" id="main-image">
@@ -64,15 +62,11 @@
                             <li><img src="assets/images/icons/star.png" alt="Star"></li>
                             <li><img src="assets/images/icons/star.png" alt="Star"></li>
                         </ul>
-                        <p>36 Rating</p>
+                        <p class="rating-text-view"></p>
                     </div>
-                    <p class="price">$10</p>
-                    <p class="product-description">Lorem ipsum dolor sit amet consectetur. Eget sit posuere enim
-                        facilisi. Pretium orci venenatis habitasse gravida nulla tincidunt iaculis. Aliquet at massa
-                        quisque libero viverra ut sed. Est vulputate est rutrum nunc nunc pellentesque ultrices
-                        pharetra. Mauris euismod sed vel quisque tincidunt suspendisse sed turpis volutpat. </p>
+                    <p class="price"></p>
+                    <p class="product-description"></p>
                     <section class="purchase-options">
-                        <h3 class="visually-hidden">Purchase Options</h3>
                         <ul class="quantity">
                             <li>
                                 <p>Quantity</p>
@@ -84,7 +78,7 @@
                                 <p>Total Amount</p>
                             </li>
                             <li>
-                                <p class="total-price">$10</p>
+                                <p class="total-price price"></p>
                             </li>
                         </ul>
                         <button class="add-to-cart">
