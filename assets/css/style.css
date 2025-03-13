@@ -315,3 +315,7 @@ main {
 .described {
     display: none;
 }
+
+.mini-img {
+    display: none;
+}

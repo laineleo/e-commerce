@@ -13,11 +13,24 @@ document.addEventListener("DOMContentLoaded", function () {
         const priceElement = document.querySelector(".price");
         const descriptionElement = document.querySelector(".product-description");
 
+        // Set the main product image
         mainImage.setAttribute("src", productDetails.image);
         productNameElement.innerText = productDetails.name;
         ratingTxt.innerText = productDetails.rateText;
         priceElement.innerText = productDetails.price;
         descriptionElement.innerText = productDetails.description;
+
+        // Display mini images in the thumbnail container
+        const miniImagesContainer = document.getElementById("mini-images");
+        miniImagesContainer.innerHTML = ''; // Clear any existing thumbnails
+
+        productDetails.miniImages.forEach(src => {
+            const img = document.createElement("img");
+            img.src = src;
+            img.alt = "Thumbnail"; // You can customize the alt text if needed
+            img.classList.add("mini-img");
+            miniImagesContainer.appendChild(img);
+        });
     }
 
     const addToCartButton = document.querySelector(".add-to-cart");
